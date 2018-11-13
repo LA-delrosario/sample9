@@ -14,31 +14,43 @@ In the end, Jose would like to have 2 arrays:
 const bills = [];
 let tips = [];
 let finalBills = [];
-var tip, finalBill,i=0;
-
-
-for(let i=0; i<bills.length; i++){
-	if(bills[i] < 50){
-		tip = bills[i] * 0.2;
-	}else if(bills[i] > 50 && bills[i] <200){
-		tip = bills[i] * 0.15;
-	}else{
-		tip = bills[i] * 0.10;
-	}
-	finalBill = tip + bills[i];
-	tips.push(tip);
-	finalBills.push(finalBill);
-}
+var tip, finalBill,i=0,totalTips = 0, totalFinalBills = 0;
 
 console.log(tips);
 console.log(finalBills);
 
 function getBill(){
+	console.log(i);
 	bills[i] = Number(document.getElementById("bill").value);
-	i++
+	i++;
+	
+	tips = [];
+	finalBills = [];
 
 	document.getElementById("showBill").value = bills;
 	console.log(bills);
+	document.getElementById("bill").value = "";
+
+	for(let x=0; x<bills.length; x++){
+		if(bills[x] <= 50){
+			tip = bills[x] * 0.2;
+			tips.push(tip);
+		}else if(bills[x] > 50 && bills[x] <= 200){
+			tip = bills[x] * 0.15;
+			tips.push(tip);
+		}else{
+			tip = bills[x] * 0.10;
+			tips.push(tip);
+	}
+	finalBill = tip + bills[x];
+	totalFinalBills += finalBill;
+	totalTips += tip;
+	finalBills.push(finalBill);
+	}
+	document.getElementById("tip-list").innerHTML= tips.join('<br>');
+	document.getElementById("final-list").innerHTML = finalBills.join('<br>');
+	document.getElementById("totalTip").innerHTML = "Total: " + totalTips;
+	document.getElementById("totalFinal").innerHTML = "Total: " + totalFinalBills;
 }
 
 let btn1 = document.getElementById("addBill");

@@ -2,4 +2,57 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+}
+
+.main-bg{
+	background-image: url(../bg-lg.png);
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.right{
+	height: 100vh;
+}
+
+.blue{
+	color: #1a0c7d;
+}
+
+.start{
+	margin-top: 15%;
+}
+
+.btn-primary{
+	background-color: #3e28d2;
+	border: #3e28d2;
+}
+
+#tip-list, #final-list{
+	border: 2px solid #c6c2ff;
+	border-radius: 5%;
+	min-height: 10vh;
+}
+
+@media only screen and (max-width: 414px) {
+.main-bg{
+	background-image: url(../bg-sm.png);
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ 	
+}
+}
+	
+
+/* Tablet Styles */
+@media only screen and (min-width: 415px) and (max-width: 960px) {
+.main-bg{
+	background-image: url(../bg-md.png);
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
 }

@@ -12,17 +12,44 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	
 	<!-- fabicon -->
-	<!-- <link rel="icon" type="image/gif/png" href="logo.png"> -->
+	<link rel="icon" type="image/gif/png" href="logo.png">
 	
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Share+Tech+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed:700" rel="stylesheet">
 </head>
 <body>
-	<h1>Tip Calculator</h1>
+	<div class="row main-bg">
+		<div class="col-lg-6 col-md-12 col-12  px-0 start">
+			<h1 class="text-center blue">TIP CALCULATOR</h1>
+			<div class="row my-2 mx-0">
+				<input type="number" id="bill" placeholder = "Enter Bill Here" class="col-6 offset-3">
+			</div>
+			<div class = "row my-2 mx-0">
+				<button id="addBill" class = "btn btn-primary col-2 offset-5"> Add Bill </button>
+			</div>
+			
 
-	<input type="number" id="bill" placeholder = "Enter Bill Here" class="col-8 offset-2">
-	<button id="addBill"> Add Bill </button>
+			<div class="row my-2 mx-0">
+				<input type="text" id="showBill" placeholder="Bill List:" class="col-6 offset-3">
+			</div>
 
-	<input type="text" id="showBill" placeholder="Enter Bill Here" class="col-8 offset-2">
+			<div class = "row mx-0">
+				<div class="col-5 offset-1 ">
+					<h5 class="blue">Tip List </h5>
+					<div type="text" id="tip-list" class="col-12">
+					</div>
+					<h5 id="totalTip">Total: </h5>
+				</div>
+				<div class="col-5 ">
+					<h5 class="blue">Total Bill List </h5>
+					<div type="text" id="final-list" class="col-12" ></div>
+					<h5 id=totalFinal>Total: </h5>
+				</div>
+			</div>
+		</div>
+		<div class="right col-lg-6 col-md-6 col-6 px-0">
+			
+		</div>
+	</div>
 	
 
 	<!-- jquery first then popper then bootstrap js -->
